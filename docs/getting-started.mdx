@@ -1,0 +1,57 @@
+---
+sidebar_position: 2
+---
+
+# Getting Started
+
+
+:::tip Code Access
+
+At this point, you should have successfully cloned the code if you had access.
+
+:::
+
+
+## Installation
+
+Once cloned, cd into the project folder and run installation command 
+
+```bash
+cd /project-folder
+npm install
+```
+
+## Environment Setup
+
+### Step 1
+Make a new `.env.local` file at the root using `.env.example` file.
+
+### Step 2
+- Add an `AUTH_SECRET` to use Next-Auth by running `openssl rand -base64 32`
+- Add a postgres `DATABASE_URL`. Easiest would to be get a Supabase URL.
+
+### Step 3
+- Create a Google and Github Apps and get `client-id` and `client-secret`.
+- Once you get the client id and secret, you should populate these 4 env variables for Next-Auth `AUTH_GOOGLE_ID, AUTH_GOOGLE_SECRET, AUTH_GITHUB_ID, AUTH_GITHUB_SECRET`
+:::tip Instruction video
+
+For setting up `Github and Google` OAuth App  check out this [instruction video](https://www.youtube.com/watch?v=AbUVY16P4Ys&t)
+
+:::
+
+
+### Step 4
+- First create this `REDIRECT_URI` env variables value `http://localhost:3000/apps/google-calendar/api/callback`.
+- Now we will create one more Google OAuth App for our calendar integration, we will follow the same approach as `Google OAuth App` and get the client-id and secret.
+- Make sure to add `REDIRECT_URI`as callback url while creating OAuth App and also `Enable calendar APIs` for your oauth app. 
+- Once you get client-id and secret add them to these env variables `GOOGLE_CALENDAR_OAUTH_ID, GOOGLE_CALENDAR_OAUTH_SECRET`.
+:::tip Instruction video
+
+For setting up `Google OAuth App + Calendar APIs` on google-console check out this [instruction video](https://www.youtube.com/watch?v=ThMuhf6jv-s&t=330s)
+
+:::
+
+### Step 5
+- As a last-step create an openai API key and add it to `OPENAI_API_KEY`
+
+With this your env-setup should be complete 🔥.
