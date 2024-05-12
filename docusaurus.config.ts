@@ -2,22 +2,23 @@ import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
+const organizationName = "rajeshdavidbabu";
+const projectName = "chatomate-docs";
+
 const config: Config = {
   title: "Chatomate Docs",
   tagline: "AI is cool",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://rajeshdavidbabu.github.io/chatomate-docs",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  url: `https://${organizationName}.github.io`,
+  baseUrl: `/${projectName}/`,
   trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "rajeshdavidbabu", // Usually your GitHub org/user name.
-  projectName: "chatomate-docs", // Usually your repo name.
+  organizationName, // Usually your GitHub org/user name.
+  projectName, // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

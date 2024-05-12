@@ -22,7 +22,11 @@ This error occurs rarely when OpenAI client throws, and one of the most common r
 
 ![API Call Error](./assets/api-call-error.png)
 
-Quick fix is to refresh page and try again.
+:::info Fixed
+
+This error has been fixed by filtering the last 10 messages and also ensuring that tool_call never occurs standalone in the array of messages
+
+:::
 
 
 ## Google Calendar API errors
